@@ -20,7 +20,7 @@ class SensorPublisher(Node):
         msg.data = f"temperature:{temperature},humidity:{humidity}"
         
         # [TODO 3] publisher가 메시지를 퍼블리시하는 코드를 작성하세요.
-        self.publisher_.publish(None)
+        self.publisher_.publish(msg)
         self.get_logger().info(f"Published: {msg.data}")
 
 def main(args=None):
