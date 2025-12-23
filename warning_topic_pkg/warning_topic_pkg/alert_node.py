@@ -32,8 +32,8 @@ class AlertNode(Node):
 def main(args=None):
     rclpy.init(args=args)
     # [TODO 3] 노드 객체를 생성하세요.
-    node = None
+    node = AlertNode()
     # [TODO 4] 노드를 실행하세요.
-    None
+    rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()
