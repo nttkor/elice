@@ -35,8 +35,8 @@ class FakeScanPublisher(Node):
         # 현재 시간을 타임스탬프로 설정 (데이터 생성 시점 기록)
         # ROS 2에서 시간 동기화와 데이터 시퀀스 추적에 중요합니다.
 
-        # TODO 1: 좌표계 이름을 문자열로 지정하세요
-        scan.header.frame_id = None  # 여기에 좌표계 이름 입력
+        # TODO 1: 좌표계 이름을 문자열로 지정하세요 ✅ SOLVED
+        scan.header.frame_id = 'laser_frame'  # 센서 중심 좌표계 설정
         # 힌트: 'laser_frame', 'base_scan', 'lidar_link' 중 하나를 선택
         # 권장: 'laser_frame' (LaserScan은 센서 중심 좌표계가 일반적)
         # 
